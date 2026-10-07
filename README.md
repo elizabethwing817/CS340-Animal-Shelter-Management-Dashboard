@@ -1,80 +1,81 @@
 # Animal Shelter Management Dashboard
 
-**Course:** CS340 – Client/Server Development  
-**University:** Southern New Hampshire University
-
----
-
 ## Overview
 
-This project was completed for CS340 – Client/Server Development at Southern New Hampshire University.
+The Animal Shelter Management Dashboard is a client/server application developed using Python, MongoDB, and Dash for CS340 – Client/Server Development at Southern New Hampshire University.
 
-The application is an interactive dashboard developed using Python, MongoDB, and Dash to manage and visualize animal shelter data. Users can filter rescue animals by category, browse records in a searchable data table, view geographic locations on an interactive map, and analyze rescue data through dynamic charts.
-
----
+The application uses the Austin Animal Center Outcomes dataset and allows users to filter and visualize animal shelter records based on rescue-training criteria.
 
 ## Features
 
-- CRUD database operations using MongoDB
-- Interactive Dash web application
-- Searchable and sortable data table
-- Rescue category filtering
-- Interactive geographic mapping
-- Dynamic pie chart visualization
+- MongoDB CRUD operations
+- Searchable and sortable animal records
+- Water Rescue filtering
+- Mountain or Wilderness Rescue filtering
+- Disaster or Individual Tracking filtering
+- Interactive geographic map
+- Dynamic breed pie chart
 - Dashboard reset functionality
 
----
-
-## Technologies Used
+## Technologies
 
 - Python
 - MongoDB
 - PyMongo
 - Dash
-- Plotly
 - JupyterDash
-- Git
-- GitHub
+- Plotly
+- Dash Leaflet
+- Pandas
+- Jupyter Notebook
 
----
+## Screenshots
 
-## Skills Demonstrated
+### Dashboard Starting State
 
-- Database design
-- CRUD operations
-- Client/server architecture
-- Data visualization
-- Interactive dashboards
-- Python development
-- MongoDB queries
-- User interface design
-- Software debugging
+![Dashboard Starting State](dashboard-starting-state.png)
 
----
+### Water Rescue Filter
 
-## Repository Contents
+![Water Rescue Filter](water-rescue-chart-map.png)
 
-- AnimalShelter CRUD module
-- Interactive dashboard application
-- Project documentation
-- README
-- Supporting project files
+### Disaster or Individual Tracking Filter
 
----
+![Disaster or Individual Tracking Filter](disaster-tracking-chart-map.png)
+
+## Project Structure
+
+`AnimalShelter.py` contains the MongoDB CRUD functionality for creating, reading, updating, and deleting animal records.
+
+`AnimalShelterDashboard.ipynb` contains the dashboard interface, rescue filtering logic, data table, pie chart, and interactive map.
+
+## Setup
+
+The project requires Python, MongoDB, Jupyter Notebook, and the required Python libraries.
+
+The application expects a MongoDB database named `aac` with an `animals` collection. MongoDB credentials are stored using the following environment variables:
+
+`MONGODB_USERNAME`  
+`MONGODB_PASSWORD`
+
+The original project was developed and tested in the SNHU Codio environment using JupyterDash, so additional configuration may be required when running it in another environment.
+
+## Challenges and Solutions
+
+One challenge involved configuring the Dash application to run correctly within the Codio environment. This was resolved by using the appropriate JupyterDash configuration and verifying the MongoDB authentication settings.
+
+Another challenge involved constructing MongoDB queries that correctly matched the breed, age, and sex requirements for each rescue category. The filtering logic was tested against the dataset to verify that the appropriate records were returned.
 
 ## What I Learned
 
-This project combined multiple software engineering concepts into a complete client/server application. I gained experience designing CRUD operations for MongoDB, connecting a database to a Python web application, and presenting information through interactive visualizations. The project also strengthened my debugging skills while integrating multiple technologies into a single application.
+This project strengthened my understanding of client/server development and database integration. I gained experience creating reusable CRUD operations with MongoDB and PyMongo, connecting database functionality to a Python application, constructing MongoDB queries, and presenting database results through interactive tables, charts, and geographic visualizations.
 
----
-
-## Potential Enhancements
-
-Future improvements could include:
+## Future Enhancements
 
 - User authentication
-- Advanced search and filtering
-- Additional dashboard visualizations
-- Exporting reports
+- Additional search and filtering options
 - REST API integration
-- Mobile-responsive interface
+- Additional visualizations
+- Report export functionality
+- Responsive dashboard design
+- Expanded automated testing
